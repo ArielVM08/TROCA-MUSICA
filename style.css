@@ -1,0 +1,126 @@
+/* Estilo geral da página inspirado no Spotify: fundo escuro com gradiente, fonte sans-serif e layout flexível */
+body {
+  background-image: linear-gradient(to bottom, #121a1b, #181f20); /* Gradiente escuro sem borda preta inferior */
+  min-height: 100vh;
+  box-sizing: border-box; /* Inclui padding na altura total para evitar overflow */
+  color: white;
+  font-family: 'Helvetica Neue', sans-serif; /* Fonte moderna similar ao Spotify */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  margin: 0;
+  padding: 20px;
+  transition: background 0.8s ease; /* Transição suave ao trocar de background */
+}
+
+/* Estilo para botões: herdam cor do fundo e texto, sem borda para um look limpo */
+button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease; /* Transição suave ao hover */
+}
+
+button:hover {
+  opacity: 0.7; /* Efeito de hover sutil */
+}
+
+/* Container abaixo da capa: layout horizontal com espaçamento */
+#below-cover {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3em 0 1em 0;
+  border-radius: 70%;
+  width: 450px;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para destacar */
+}
+
+/* Container dos botões: espaçamento uniforme */
+#button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px; /* Espaçamento entre botões */
+}
+
+/* Classe para botões pequenos */
+.button {
+  font-size: 1.5em;
+}
+
+/* Classe para botões de navegação */
+.button-navigate {
+  font-size: 3em;
+}
+
+/* Classe para o botão maior (play/pause) */
+.button-biggest {
+  font-size: 4em;
+  color: #1db954; /* Verde do Spotify para o botão principal */
+}
+
+/* Estilo da capa do álbum */
+#cover {
+  width: 450px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+/* Título da playlist: centralizado */
+#playlist-title {
+  color: #1db954; /* Verde do Spotify para o título */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 4em 0 4em 0;
+  font-size: 20px;
+}
+
+/* Nome da música: destaque com negrito */
+#song-name {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+/* Classe para texto de cor clara (artista, etc.) */
+.light-color {
+  color: #b3b3b3; /* Cinza claro do Spotify */
+}
+
+/* Barra de progresso: fundo cinza */
+#progress-bar {
+  background-color: #b3b3b3;
+  height: 4px; /* Aumentei ligeiramente para melhor visibilidade */
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+/* Progresso atual: branco */
+#current-progress {
+  background-color: #1db954; /* Verde do Spotify para o progresso */
+  height: inherit;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease; /* Transição suave para o progresso */
+}
+
+#profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Deixa a imagem circular */
+  object-fit: cover; /* Garante que a imagem preencha o círculo sem distorção */
+  margin-right: 200px;
+}
+
+#like:hover {
+  color: #1db954; /* Verde do Spotify ao hover */
+  
+}
