@@ -17,7 +17,7 @@ const StickoModet = {
   songName: "Sticko Modet", // Nome da música
   file: "songs/travis-scott-sicko-mode-audio.mp3", // Caminho do arquivo de áudio
   cover: "images/butterfly_effect.png", // Caminho da imagem da capa
-  artist: "Zé Vaqueiro", // Nome do artista
+  artist: "Travis Scott", // Nome do artista
   background: "linear-gradient(180deg, #0f1515 0%, #ac8b1f 100%)",
 };
 
