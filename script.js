@@ -9,6 +9,7 @@ const previous = document.getElementById("previous"); // Botão para música ant
 const progressBar = document.getElementById("progress-bar"); // Container da barra de progresso
 const currentProgress = document.getElementById("current-progress"); // Barra preenchida que mostra o progresso
 const body = document.body; // Corpo da página para alterar o background
+const volume = document.getElementById("volume"); // Controle de volume (se necessário)
 
 // 🎵 Playlist organizada (IMPORTANTE: caminhos corretos)
 // Objeto contendo informações da primeira música da playlist
@@ -45,6 +46,21 @@ const playlist = [StickoModet, GodsPlan, tubaroes];
 let currentSong = 0;
 // Variável booleana que rastreia se uma música está tocando ou pausada
 let isPlaying = false;
+
+// 🔊 Função para alternar entre mudo e volume normal
+function toggleVolume() {
+  const btnVolume = document.getElementById('volume');
+  const icone = btnVolume.querySelector("i");
+
+  song.muted = !song.muted; // Inverte o estado (se true vira false e vice-versa)
+
+  if (song.muted) {
+    icone.classList.replace("bi-volume-up", "bi-volume-mute");
+  } else {
+    icone.classList.replace("bi-volume-mute", "bi-volume-up");
+  }
+}
+
 
 // ▶️ Função para iniciar a reprodução da música
 function playSong() {
